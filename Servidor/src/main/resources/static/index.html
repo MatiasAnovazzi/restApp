@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cliente\style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pagina de prueba para agregar empleados</h1>
+    <form>
+        <label for="Nombre">Nombre:</label><input id="Nombre" type="text">
+        <label for="Apellido">Apellido:</label><input id="Apellido" type="text">
+        <label for="Nombre">Edad:</label><input id="edad" type="text">
+    </form>
+    <button onclick="postData()">Publicar</button>
+</body>
+<script>
+
+
+    function postData(){
+        var valueNombre = document.getElementById("Nombre");
+    var valueApellido = document.getElementById("Apellido");
+    var valueEdad = document.getElementById("edad");
+        var nombre = valueNombre.value
+        var apellido = valueApellido.value
+        var edad = valueEdad.value
+        const url = "http://localhost:8080/api/Empleados";
+        const data = {
+            nombre: nombre,
+            apellido: apellido,
+            edad: parseInt(edad)
+        };
+
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+
+    }
+</script>
+</html>

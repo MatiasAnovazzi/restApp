@@ -1,20 +1,14 @@
 package api.empleados.controllers;
 
 
+import api.empleados.modelo.EmpleadoModelo;
+import api.empleados.service.EmpleadoService;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Response;
+import org.springframework.stereotype.Component;
 
 import java.net.URI;
 import java.util.List;
-
-import org.springframework.stereotype.Component;
-
-import api.empleados.modelo.EmpleadoModelo;
-import api.empleados.service.EmpleadoService;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.core.Response;
 @Component
 @Path("/")
     public class EmpleadosController {
