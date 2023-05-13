@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+button{
+    margin-top: 10px;
+}
+#contenedor{
+    margin-top: 20px;
+    width: 60%;
+    border: 1px solid black;
+    height: 40%;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+.title{
+    width: 33%;
+    border: 1px solid black;
+    text-align: center;
+}
+#title{
+    display: flex;
+}
+.listas{
+    width: 33%;
+    border: 1px solid black;
+}
+#listas{
+    display: flex;
+    height: 100px;
+}       
