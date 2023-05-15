@@ -6,7 +6,7 @@ import api.empleados.service.EmpleadoService;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 
 import java.net.URI;
 import java.util.List;
