@@ -21,6 +21,11 @@ fetch(url)
       var newLi = document.createElement("li");
       newLi.textContent = edad;
       ul.appendChild(newLi);
+
+      var ul = document.getElementById("email")
+      var newLi = document.createElement("li")
+      newLi.textContent = email
+      ul.appendChild(newLi)
       console.log(data)
     }
   })
@@ -33,14 +38,17 @@ function postData() {
   var valueNombre = document.getElementById("Nombre");
   var valueApellido = document.getElementById("Apellido");
   var valueEdad = document.getElementById("edad");
+  var valueEmail = document.getElementById("email");
   var nombre = valueNombre.value.trim();
   var apellido = valueApellido.value.trim();
   var edad = valueEdad.value.trim();
+  var email = valueEmail.value.trim();
   const url = "http://localhost:8080/api/Empleados";
   const data = {
     nombre: nombre,
     apellido: apellido,
     edad: parseInt(edad),
+    email: email
   };
 
   fetch(url, {
@@ -64,6 +72,7 @@ function postData() {
       const nombre = ultimoElemento.nombre;
       const apellido = ultimoElemento.apellido;
       const edad = ultimoElemento.edad;
+      const email = ultimoElemento.email;
 
       var ul = document.getElementById("nombres");
       var newLi = document.createElement("li");
@@ -79,6 +88,12 @@ function postData() {
       var newLi = document.createElement("li");
       newLi.textContent = edad;
       ul.appendChild(newLi);
+
+      var ul = document.getElementById("email")
+      var newLi = document.createElement("li")
+      newLi.textContent = email
+      ul.appendChild(newLi)
+
       console.log(data)
       alert("El empleado se creo con exito")
     }

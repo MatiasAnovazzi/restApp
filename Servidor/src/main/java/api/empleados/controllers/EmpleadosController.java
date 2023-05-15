@@ -16,7 +16,7 @@ import java.util.List;
 
 
         public EmpleadosController (EmpleadoService empleadoService){
-            EmpleadoService.add(new EmpleadoModelo("Matias", "Anovazzi", 17));
+            EmpleadoService.add(new EmpleadoModelo("Matias", "Anovazzi", 17, "anovazzimatias182@gmail.com"));
         }
        
         @GET
