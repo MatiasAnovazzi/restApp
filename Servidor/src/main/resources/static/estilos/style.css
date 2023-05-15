@@ -51,10 +51,8 @@ body {
     margin-bottom: 10px;
     font-weight: bold;
   }
-  #listas {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  
+  
   .title {
     width: 50%;
     text-align: center;
@@ -63,7 +61,6 @@ body {
   }
   
   .table-row {
-    display: flex;
     align-items: center;
     padding: 8px 0;
     border-bottom: 1px solid #ccc;
@@ -72,7 +69,6 @@ body {
   .listas {
     width: 33%;
     padding: 0 10px;
-    box-sizing: border-box;
   }
   
   @media (max-width: 768px) {
@@ -80,4 +76,6 @@ body {
       width: 90%;
     }
   }
-  
+  #listas{
+    display: flex;
+  }
