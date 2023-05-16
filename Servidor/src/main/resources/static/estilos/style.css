@@ -53,17 +53,18 @@ body {
   }
   #listas {
     display: flex;
-    flex-wrap: wrap;
   }
   .title {
     width: 50%;
     text-align: center;
     padding: 8px 0;
     font-weight: bold;
+    margin: auto;
+    border-bottom: 1px solid #ccc;
   }
   
   .table-row {
-    display: flex;
+    
     align-items: center;
     padding: 8px 0;
     border-bottom: 1px solid #ccc;

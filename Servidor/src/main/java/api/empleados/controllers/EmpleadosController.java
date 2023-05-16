@@ -6,23 +6,27 @@ import api.empleados.service.EmpleadoService;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.net.URI;
 import java.util.List;
 @Component
 @Path("/")
+@CrossOrigin
     public class EmpleadosController {
 
 
         public EmpleadosController (EmpleadoService empleadoService){
             EmpleadoService.add(new EmpleadoModelo("Matias", "Anovazzi", 17));
         }
+        @CrossOrigin
         @GET
         @Path("/Empleados")
         @Produces("application/json")
         public List<EmpleadoModelo> listarTodos() {
             return EmpleadoService.getAll();
         }
+        @CrossOrigin
         @POST
         @Path("/Empleados")
         @Produces("application/json")
