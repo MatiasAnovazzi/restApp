@@ -6,6 +6,7 @@ fetch(url)
       const nombre = data[i].nombre;
       const apellido = data[i].apellido;
       const edad = data[i].edad;
+      const email = data[i].email;
 
       var ul = document.getElementById("nombres");
       var newLi = document.createElement("li");
@@ -38,11 +39,13 @@ function postData() {
   var valueNombre = document.getElementById("Nombre");
   var valueApellido = document.getElementById("Apellido");
   var valueEdad = document.getElementById("edad");
-  var valueEmail = document.getElementById("email");
+  var valueEmail = document.getElementById("emails");
+  
   var nombre = valueNombre.value.trim();
   var apellido = valueApellido.value.trim();
   var edad = valueEdad.value.trim();
-  var email = valueEmail.value.trim();
+  var email = valueEmail.value
+  
   const url = "http://localhost:8080/api/Empleados";
   const data = {
     nombre: nombre,
@@ -61,9 +64,10 @@ function postData() {
     .then((response) => response.json())
     .then((data) => console.log(data))
     .catch((error) => console.error(error));
+    
     fetch(url)
-  .then((response) => response.json())
-  location.reload()
+    .then((response) => response.json())
+    location.reload()
   .then((data) => {
     for (let i = 0; i < data.length - 1; i++) {
       
@@ -91,7 +95,7 @@ function postData() {
 
       var ul = document.getElementById("email")
       var newLi = document.createElement("li")
-      newLi.textContent = email
+      newLi.textContent = email;
       ul.appendChild(newLi)
 
       console.log(data)
