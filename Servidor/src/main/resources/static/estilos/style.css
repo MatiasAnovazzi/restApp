@@ -51,16 +51,23 @@ body {
     margin-bottom: 10px;
     font-weight: bold;
   }
-  
-  
+  #listas {
+    display: flex;
+  }
   .title {
     width: 50%;
     text-align: center;
     padding: 8px 0;
     font-weight: bold;
+    margin: auto;
+    border-bottom: 1px solid #ccc;
   }
   
   .table-row {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 3fccef36b78b4067a1c242c82e7f56c84f722102
     align-items: center;
     padding: 8px 0;
     border-bottom: 1px solid #ccc;
